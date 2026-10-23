@@ -1,0 +1,63 @@
+{
+  "version": "sample",
+  "note": "動作確認用のサンプルです。特許庁の解説ページにある例（類似群コード例題）だけを入れています。実際の一覧ではありません。",
+  "source": "https://www.jpo.go.jp/system/trademark/gaiyo/bunrui/ruijigun_cord_reidai.html",
+  "items": [
+    {
+      "cls": 16,
+      "name": "書籍",
+      "codes": [
+        "26A01"
+      ]
+    },
+    {
+      "cls": 16,
+      "name": "新聞",
+      "codes": [
+        "26A01"
+      ]
+    },
+    {
+      "cls": 16,
+      "name": "鉛筆",
+      "codes": [
+        "25B01"
+      ]
+    },
+    {
+      "cls": 24,
+      "name": "タオル",
+      "codes": [
+        "17B01"
+      ]
+    },
+    {
+      "cls": 41,
+      "name": "技芸・スポーツ又は知識の教授",
+      "codes": [
+        "41A01"
+      ]
+    },
+    {
+      "cls": 44,
+      "name": "医業",
+      "codes": [
+        "42V02"
+      ]
+    },
+    {
+      "cls": 20,
+      "name": "家具",
+      "codes": [
+        "20A01"
+      ]
+    },
+    {
+      "cls": 14,
+      "name": "宝石箱",
+      "codes": [
+        "20A01"
+      ]
+    }
+  ]
+}
