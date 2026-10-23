@@ -1,11 +1,10 @@
 name: jpo-check
 
 # 手動で実行できます（Actions タブ → jpo-check → Run workflow）。
-# 月に1回、1日の 09:00（日本時間）にも自動で実行されます。
+# 定期実行は止めています。2026-10-23 の試験で、特許庁のサイトから HTTP 403 で
+# アクセスを拒否されたためです（GitHub の実行環境から自動で取得できませんでした）。
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 1 * *"
 
 permissions:
   contents: read
