@@ -1,0 +1,36 @@
+name: jpo-check
+
+# 手動で実行できます（Actions タブ → jpo-check → Run workflow）。
+# 月に1回、1日の 09:00（日本時間）にも自動で実行されます。
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 * *"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 必要なライブラリを入れる
+        run: pip install openpyxl
+
+      - name: 特許庁のページを確認する
+        run: python scripts/jpo_check.py
+
+      - name: 結果を保存する（Excel と summary.json）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jpo-check-output
+          path: out/
+          if-no-files-found: ignore
